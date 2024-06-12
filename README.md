@@ -102,11 +102,26 @@ Clearly state your prediction problem and type (classification or regression). R
 
 ### Model Description
 
-Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings.
+Since our goal is to create a multi-class classifier, we decided to use a Decision Tree Classifier. The parameters for the Decision Tree Classifier were set to the defualt parameters offered by scikit-learn. In order to predict the label for the `'rating'` column, we decided to use the following columns as the input parameters:
+| Column                  | Description               |
+| :---------------------- | :------------------------ |
+| `'total fat (PDV)'`     | Continuous (Numerical)    |
+| `'sugar (PDV)'`         | Continuous (Numerical)    |
+| `sodium (PDV)`          | Continuous (Numerical)    |
+| `'protein (PDV)'`       | Continuous (Numerical)    |
+| `'saturated fat (PDV)'` | Continuous (Numerical)    |
+| `'carbohydrates (PDV)'` | Continuous (Numerical)    |
 
-### Model Performance
+There are no encodings or pre-processing that was performed. The data was split into training, testing, and validation data with the training data being 20% of all the data and the validation data being 25% of the training data.
+The output of the baseling model were as follow:
 
-Report the performance of your model and whether or not you believe your current model is “good” and why.
+| Type                    | Accuracy                  |
+| :---------------------- | :------------------------ |
+| `Training Accuracy`     | 87.37%                    |
+| `Validation Accuracy`   | 68.23%                    |
+| `Testing Accuracy`      | 68.36%                    |
+
+In our opinion, this model is not "good" since there is a large difference between the training and testing accuracy. Currently, the model is overfit on the training data and doesn't have good variance. For this reason, the model has room for improvement and can't be classified as "good" right now.
 
 # Step 7: Final Model
 
