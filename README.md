@@ -173,11 +173,21 @@ Include a visualization that describes your model’s performance, e.g., a confu
 # Fairness Analysis
 
 To perform our fairness analysis, we split the data into **Group X:** Low total fat content and **Group Y:** High total fat content, and used the median total fat content of **20.0** PDV as the threshold for splitting our data. We used median due to a couple of recipes with extremely high nutritional content that skew the mean too much. We used **precision** as our parity measure because we want the model to correctly identify ratings and because we used a classification model.
+
 **Null Hypothesis:** Our model is fair. Its precision for recipes with low total fat and high total fat content are roughly the same, and any differences are due to random chance.
+
 **Alternative Hypothesis:** Our model is unfair. Its precision for low sodium is lower than it sprecision for high sodium.
+
 **Evaluation Metric:** Precision
 **Test Statistic:** low_group precision - high_group precision
 **Significance Level:** 0.05
+
+<iframe
+  src="assets/precision_difference_histogram.html"
+  width="650"
+  height="450"
+  frameborder="0"
+></iframe>
 
 ### Conclusion
 
