@@ -80,6 +80,13 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
 ></iframe>
 With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. The missingness of reviews does depend on number of steps. 
 
+<iframe
+  src="assets/rev_steps_plot.html"
+  width="650"
+  height="450"
+  frameborder="0"
+></iframe>
+
 ### Minutes and Review
 
 **Null Hypothesis:** The missingness of reviews does not depend on the number of minutes the recipe takes.
@@ -99,6 +106,13 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
   frameborder="0"
 ></iframe>
 With an observed p-value of **0.624** > 0.05, we fail to reject the null, there is not enough evidence that missingness of reviews depends on minutes. Although minutes and number of steps would appear to be correlated, this is not the case because many recipes involve waiting processes such as marinating, refrigerating, proofing, baking etc., so minutes has high variance and does not directly impact complexity of the recipe.
+
+<iframe
+  src="assets/rev_mins_plot.html"
+  width="650"
+  height="450"
+  frameborder="0"
+></iframe>
 
 # Step 4: Hypothesis Testing
 
