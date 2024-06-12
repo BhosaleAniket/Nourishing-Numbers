@@ -183,9 +183,9 @@ To perform our fairness analysis, we split the data into **Group X:** Low total 
 **Significance Level:** 0.05
 
 <iframe
-  src="assets/precision_difference_histogram.html"
-  width="1000"
-  height="600"
+  src="assets/precision_difference_histogram1.html"
+  width="650"
+  height="450"
   frameborder="0"
 ></iframe>
 With a an actual observed value of -0.0049 and a p-value of **0.229**>0.05, we fail to reject the null hypothesis, and there is not enough evidence to claim that our model is unfair. The models precision for recipes with low total fat is not lower its precision for recipes with high sodium, and the situation where it did seem to be different was due to random chance.
