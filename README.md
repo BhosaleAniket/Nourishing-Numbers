@@ -48,15 +48,27 @@ Embed at least one plotly plot displaying the relationship between two columns. 
 
 Embed at least one grouped table or pivot table and explain its significance.
 
-# Step 3: Assessment of Missingness
+# Assessment of Missingness
+
+The columns 'description', 'review', and 'rating' had missing values in the original merged dataset.
 
 ## NMAR Analysis
 
-### NMAR Explanation
-
-State whether you believe there is a column in your dataset that is NMAR. Explain your reasoning and any additional data you might want to obtain that could explain the missingness.
+Of the three columns with missing values, the 'rating' column appears to potentially be NMAR. Missingness of the rating column would depend on whether users actually tried the recipe and have something to rate. If the users who viewed the recipe did not even try the recipe, there is no rating to file. Thus, additional data we could obtain to explain missingness would be information on engagement of the recipe, including total number of views, interactions, and time spent viewing the recipe, to make missingness MAR because we would be able to see whether many users saw the recipe and how many tried it.
 
 ## Missingness Dependency
+
+We assessed the missingness dependency of the 'review' column on the columns 'n_steps' and 'minutes'.
+
+> Number of Steps and Review
+
+**Null Hypothesis:** The missingness of reviews does not depend on the number of steps in the recipe.
+
+**Alternative Hypothesis**: The missingness of reviews does depend on the number of steps in the recipe.
+
+**Test Statistic:** Absolute difference of mean number of steps of the distribution of the group without missing reviews and the distribution of the mean number without missing reviews.
+
+**Significance Level:** 0.05
 
 ### Missingness Permutation Tests
 
