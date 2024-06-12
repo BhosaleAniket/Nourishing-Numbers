@@ -86,6 +86,7 @@ With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in fav
   height="450"
   frameborder="0"
 ></iframe>
+x: number of steps y: probability, with 1 corresponding to True and 0 corresponding to False.
 
 ### Minutes and Review
 
@@ -113,7 +114,8 @@ With an observed p-value of **0.624** > 0.05, we fail to reject the null, there 
   height="450"
   frameborder="0"
 ></iframe>
-Zoomed in due to outliers in minutes, included only recipes that take 5000 minutes or less.
+Zoomed in due to outliers in minutes, included only recipes that take 5000 minutes or less. 
+x: minutes y: probability, with 1 corresponding to True and 0 corresponding to False.
 
 # Step 4: Hypothesis Testing
 
