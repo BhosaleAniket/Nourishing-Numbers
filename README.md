@@ -60,7 +60,7 @@ Of the three columns with missing values, the 'rating' column appears to potenti
 
 We assessed the missingness dependency of the 'review' column on the columns 'n_steps' and 'minutes'.
 
-## Number of Steps and Review
+### Number of Steps and Review
 
 **Null Hypothesis:** The missingness of reviews does not depend on the number of steps in the recipe.
 
@@ -80,7 +80,7 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
 ></iframe>
 With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. The missingness of reviews does depend on number of steps. 
 
-## Minutes and Review
+### Minutes and Review
 
 **Null Hypothesis:** The missingness of reviews does not depend on the number of minutes the recipe takes.
 
