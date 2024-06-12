@@ -103,6 +103,7 @@ Clearly state your prediction problem and type (classification or regression). R
 ### Model Description
 
 Since our goal is to create a multi-class classifier, we decided to use a Decision Tree Classifier. The parameters for the Decision Tree Classifier were set to the defualt parameters offered by scikit-learn. In order to predict the label for the `'rating'` column, we decided to use the following columns as the input parameters:
+
 | Column                  | Description               |
 | :---------------------- | :------------------------ |
 | `'total fat (PDV)'`     | Continuous (Numerical)    |
