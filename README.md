@@ -74,8 +74,8 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
 
 <iframe
   src="assets/distr_n_steps_histogram.html"
-  width="600"
-  height="400"
+  width="650"
+  height="450"
   frameborder="0"
 ></iframe>
 With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. The missingness of reviews does depend on number of steps. 
@@ -94,8 +94,8 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
 
 <iframe
   src="assets/distr_minutes_histogram.html"
-  width="600"
-  height="400"
+  width="650"
+  height="450"
   frameborder="0"
 ></iframe>
 With an observed p-value of **0.624** > 0.05, we fail to reject the null, there is not enough evidence that missingness of reviews depends on minutes. Although minutes and number of steps would appear to be correlated, this is not the case because many recipes involve waiting processes such as marinating, refrigerating, proofing, baking etc., so minutes has high variance and does not directly impact complexity of the recipe.
@@ -170,13 +170,14 @@ Describe how your Final Model’s performance is an improvement over your Baseli
 
 Include a visualization that describes your model’s performance, e.g., a confusion matrix, if applicable.
 
-# Step 8: Fairness Analysis
+# Fairness Analysis
 
-## Fairness Analysis
-
-### Fairness Evaluation
-
-Perform a “fairness analysis” of your Final Model. Clearly state your null and alternative hypotheses, your choice of test statistic, and the results of your permutation test. 
+To perform our fairness analysis, we split the data into **Group X:** Low total fat content and **Group Y:** High total fat content, and used the median total fat content of **20.0** PDV as the threshold for splitting our data. We used median due to a couple of recipes with extremely high nutritional content that skew the mean too much. We used **precision** as our parity measure because we want the model to correctly identify ratings and because we used a classification model.
+**Null Hypothesis:** Our model is fair. Its precision for recipes with low total fat and high total fat content are roughly the same, and any differences are due to random chance.
+**Alternative Hypothesis:** Our model is unfair. Its precision for low sodium is lower than it sprecision for high sodium.
+**Evaluation Metric:** Precision
+**Test Statistic:** low_group precision - high_group precision
+**Significance Level:** 0.05
 
 ### Conclusion
 
