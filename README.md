@@ -60,7 +60,7 @@ Of the three columns with missing values, the 'rating' column appears to potenti
 
 We assessed the missingness dependency of the 'review' column on the columns 'n_steps' and 'minutes'.
 
-> Number of Steps and Review
+## Number of Steps and Review
 
 **Null Hypothesis:** The missingness of reviews does not depend on the number of steps in the recipe.
 
@@ -70,9 +70,19 @@ We assessed the missingness dependency of the 'review' column on the columns 'n_
 
 **Significance Level:** 0.05
 
-### Missingness Permutation Tests
+Permutation test shuffling the missingness of reviews 1000 times to collect 1000 simulating mean differences in the two distributions as described in the test statistic.
 
-Present and interpret the results of your missingness permutation tests with respect to your data and question. Embed a plotly plot related to your missingness exploration.
+---
+layout: default
+title: Permutation Test Plot
+---
+
+<iframe
+  src="assets/distr_steps.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 # Step 4: Hypothesis Testing
 
