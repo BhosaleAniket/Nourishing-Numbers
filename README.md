@@ -229,7 +229,9 @@ To perform our fairness analysis, we split the data into **Group X:** Low total 
 **Alternative Hypothesis:** Our model is unfair. Its precision for low sodium is lower than its precision for high sodium.
 
 **Evaluation Metric:** Precision
+
 **Test Statistic:** low_group precision - high_group precision
+
 **Significance Level:** 0.05
 
 <iframe
