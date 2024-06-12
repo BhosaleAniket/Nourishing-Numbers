@@ -72,11 +72,6 @@ We assessed the missingness dependency of the 'review' column on the columns 'n_
 
 Permutation test shuffling the missingness of reviews 1000 times to collect 1000 simulating mean differences in the two distributions as described in the test statistic.
 
----
-layout: default
-title: Permutation Test Plot
----
-
 <iframe
   src="assets/distr_steps.html"
   width="800"
@@ -97,11 +92,6 @@ With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in fav
 **Significance Level:** 0.05
 
 Permutation test shuffling the missingness of reviews 1000 times to collect 1000 simulating mean differences in the two distributions as described in the test statistic.
-
----
-layout: default
-title: Permutation Test Plot for Minutes
----
 
 <iframe
   src="assets/distr_minutes.html"
