@@ -66,7 +66,7 @@ We assessed the missingness dependency of the 'review' column on the columns 'n_
 
 **Alternative Hypothesis**: The missingness of reviews does depend on the number of steps in the recipe.
 
-**Test Statistic:** Absolute difference of mean number of steps of the distribution of the group without missing reviews and the distribution of the mean number without missing reviews.
+**Test Statistic:** Absolute difference of mean number of steps of the distribution of the group without missing reviews and the distribution of the mean number of steps with missing reviews.
 
 **Significance Level:** 0.05
 
@@ -83,6 +83,34 @@ title: Permutation Test Plot
   height="600"
   frameborder="0"
 ></iframe>
+
+With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. The missingness of reviews does depend on number of steps. 
+
+## Minutes and Review
+
+**Null Hypothesis:** The missingness of reviews does not depend on the number of minutes the recipe takes.
+
+**Alternative Hypothesis**: The missingness of reviews does depend on the number of minutes the recipe takes.
+
+**Test Statistic:** Absolute difference of mean number of minutes of the distribution of the group without missing reviews and the distribution of the mean minutes with missing reviews.
+
+**Significance Level:** 0.05
+
+Permutation test shuffling the missingness of reviews 1000 times to collect 1000 simulating mean differences in the two distributions as described in the test statistic.
+
+---
+layout: default
+title: Permutation Test Plot for Minutes
+---
+
+<iframe
+  src="assets/distr_minutes.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+With an observed p-value of 0.624, we fail to reject the null, there is not enough evidence that missingness of reviews depends on minutes. Although minutes and number of steps would appear to be correlated, this is not the case because many recipes involve waiting processes such as marinating, refrigerating, proofing, baking etc., so minutes has high variance and does not directly impact complexity of the recipe.
 
 # Step 4: Hypothesis Testing
 
