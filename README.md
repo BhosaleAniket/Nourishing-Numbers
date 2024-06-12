@@ -113,6 +113,7 @@ With an observed p-value of **0.624** > 0.05, we fail to reject the null, there 
   height="450"
   frameborder="0"
 ></iframe>
+Zoomed in due to outliers in minutes, included only recipes that take 5000 minutes or less.
 
 # Step 4: Hypothesis Testing
 
