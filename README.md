@@ -154,21 +154,54 @@ In our opinion, this model is not "good" since there is a large difference betwe
 
 ## Final Model
 
-### Feature Engineering
+For our final model, we used all the features used in the baseline model and added two additional features that we engineered ourselves. These features were `'sodium_prop'` and `'protein_to_fat_ratio'`. These features were generated in the pre-processing stage of the pipeline. A description of the two new features is provided below.
 
-State the features you added and why they are good for the data and prediction task.
+`'sodium_prop'`
 
-### Modeling Algorithm and Hyperparameters
+This feature is computed by calculating the proportion of sodium relative to all the other nutrients used in the baseline model. The addition of this feature was derived from the interesting aggregates plot provided in our analysis. In the interesting aggregates, we noticed that in general, there was a negative trend between `'rating'` and mean `'sodium (PDV)'`. This trend is very helful since our EDA show that in general, there are a lot more data points for 4 and 5 star ratings. This feature allows us to differentiate between the low and the high ratings, which makes it a very useful feature to consider.
 
-Describe the modeling algorithm you chose, the hyperparameters that performed the best, and the method you used to select hyperparameters.
+`'protein_to_fat_ratio'`
 
-### Model Performance
+This feature is computed by calculating the ratio between the ``'protein (PDV)'` content and `'total fat (PDV)'` content in a recipe. This feature was generated due to two reasons. The first reason is that we noticed a trend in our interesting aggregates plot. We noticed that as the star rating increases, the average protein in the recipe increases and the average total fat deacreses. This is a trend that can again be useful in differentiating between the low rating and high rating recipes. Additionally, we also noticed during the EDA that in general, healthier recipies (those with less sugar or higher protein) tended to have higher ratings. For this reason, we determined this to be an important feature to add.
 
-Describe how your Final Model’s performance is an improvement over your Baseline Model’s performance.
+**Note**: We have added a small epsilon to the denominator to prevent any zero division errors
 
-### Visualization (Optional)
+Our final model architecture uses a `'RandomForestClassifier'`. This model was chosen as opposed to the `'DecisionTreeClassifier`' since we saw an improved performance increase after trying out the two models on the same data. Additionally, the due to the architecture of the `'RandomForestClassifier'`, it was determined that have mutliple `'DecisionTreeClassifiers'` trained on the data would allow the model to better generalize and capture the trends in our data. The pipeline for the model contains the transformer to introduce the two new features mentioned above and the `'RandomForestClassifier'`.
 
-Include a visualization that describes your model’s performance, e.g., a confusion matrix, if applicable.
+The hyperparameters for the model were chosen to be `'n_estimators'` and `'max_depth'`. The reasoning for each is provided below:
+
+`'n_estimators'`
+
+In order to better capture the trends of the data and make the model have higher variance, we decided to test different n_estimators to verify if the model can be made more generalizable and have higher testing and training accuracy.
+
+`'max_depth'`
+
+By making the decisionTrees more deep, we can again make the model more rich by having it analyze deeper trends in the data and again be more robust.
+
+In order to search the best parameters, we used `'GridSearchCV'` along with a K-fold value of **3**. The inputs used were:
+
+`'n_estimators'` : [50, 100, 150, 200]
+
+`'max_depth'` : [None, 10, 20, 30, 40, 50]
+
+The best hyperparameters were determined to be:
+
+`'n_estimators'` : **150**
+
+`'max_depth'` : **10**
+
+After running the model with the aforementioned hyperparamters and pre-processing we found the new metrics to be:
+
+| Type                    | Accuracy                  |
+| :---------------------- | :------------------------ |
+| `Training Accuracy`     | 77.37%                    |
+| `Validation Accuracy`   | 77.22%                    |
+| `Testing Accuracy`      | 77.37%                    |
+
+From the results, we can see that the training accuracy of the model dropped. However, the validation and the testing accuracy of the model increased. We consider this an improvement over the baseline model since prediction based on unseen data is the most important aspect of a model. Here, we can see that the model is not overfitting the data like before, and the variance of the model is much higher and it is generalizing better to unseen data. This is why we consider this an improvement over the baseline model.
+
+
+
 
 # Fairness Analysis
 
