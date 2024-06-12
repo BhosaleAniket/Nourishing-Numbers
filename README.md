@@ -1,6 +1,5 @@
 # Nourishing Numbers: The Impact of Nutritional Value and Recipe Steps on Food Ratings and Reviews
-Authors: Aniket Bhosale and Selina Wu\
-This is a project for DSC 80 at UCSD
+Authors: Aniket Bhosale and Selina Wu
 
 
 # Introduction
