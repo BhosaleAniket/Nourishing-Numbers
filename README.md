@@ -176,7 +176,7 @@ To perform our fairness analysis, we split the data into **Group X:** Low total 
 
 **Null Hypothesis:** Our model is fair. Its precision for recipes with low total fat and high total fat content are roughly the same, and any differences are due to random chance.
 
-**Alternative Hypothesis:** Our model is unfair. Its precision for low sodium is lower than it sprecision for high sodium.
+**Alternative Hypothesis:** Our model is unfair. Its precision for low sodium is lower than its precision for high sodium.
 
 **Evaluation Metric:** Precision
 **Test Statistic:** low_group precision - high_group precision
@@ -184,14 +184,10 @@ To perform our fairness analysis, we split the data into **Group X:** Low total 
 
 <iframe
   src="assets/precision_difference_histogram.html"
-  width="650"
-  height="450"
+  width="1000"
+  height="600"
   frameborder="0"
 ></iframe>
-
-### Conclusion
-
-Interpret the results and explain any implications related to the fairness of your model.
-
+With a an actual observed value of -0.0049 and a p-value of **0.229**>0.05, we fail to reject the null hypothesis, and there is not enough evidence to claim that our model is unfair. The models precision for recipes with low total fat is not lower its precision for recipes with high sodium, and the situation where it did seem to be different was due to random chance.
 
 
