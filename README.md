@@ -2,8 +2,7 @@
 Authors: Aniket Bhosale and Selina Wu
 
 # Introduction
-
-## Introduction and Question Identification
+In this project we explore a rich dataset of recipes and their corresponding ratings ppsted on Food.com since 2008. Our primary goal is to investigate how the nutritional content and number of steps to complete a recipe influences its rating. By analyzing the relationships between nutritional factors (such as calories, fat, protein, sugar, etc.), number of steps involved, and the ratings given by users, we aim to predict the overall rating a recipe is likely to receive based on its nutritional profile. We developed this approach because we are interested in whether the rise of fast food in America has conditioned people to stray from the appreciation of a healthy or home cooked meal made with time and dedication, and instead favoring foods that are quick and easy to prepare with low nutritional value. We hope that this information may also be helpful for recipe developers and nutritionists who aim to create healthier recipes that still receive high ratings, balancing taste and nutrition more effectively.
 
 ### Dataset Introduction
 
