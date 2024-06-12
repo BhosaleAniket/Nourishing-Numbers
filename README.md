@@ -184,7 +184,7 @@ To perform our fairness analysis, we split the data into **Group X:** Low total 
 
 <iframe
   src="assets/precision_difference_histogram1.html"
-  width="650"
+  width="700"
   height="450"
   frameborder="0"
 ></iframe>
