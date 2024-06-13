@@ -53,7 +53,15 @@ The description of all these columns is provided above.
 
 ### Data Cleaning Steps
 
-Describe, in detail, the data cleaning steps you took and how they affected your analyses. 
+In order to make our dataset compatible with our analysis, we took the following steps to clean and wrangle the data:
+
+1. We left_join the two datasets on `'id'` and `'recipe_id'`
+2. We remove the entries where the `'recipe_did'` was `'Nan'` as a precaution.
+3. We then set all the values in the `'rating'` column that were `'0'` to `'np.nan'`. This step was taken because the data for the rating column is an ordinal column that ranges from `'1 - 5'`. A value of `'0'` indicates invalid data which is why it is marked as `'np.nan'` or missing.
+4. An `'average rating per recipe'` column is created to indicate the average rating for each recipe.
+5. We drop the `'id'` column since the `'recipe_id'` contains the same data and has a more informative name.
+6. We convert the `'submitted'` and the `'date'` columns from string to `'pd.DateTime'` using the `'to_datetime'` function so that these columns are compatible with temporal analysis.
+7. We split the `'nutriton'` column into `'calories (#)'`, `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'` columns and also convert it to floats for further analysis. This is an important step since we will be using these columns a lot thoughout our analysis.
 
 ### Cleaned DataFrame
 
