@@ -192,17 +192,28 @@ Zoomed in due to outliers in minutes, included only recipes that take 5000 minut
 x: minutes y: probability, with 1 corresponding to True and 0 corresponding to False.
 
 # Hypothesis Testing
+We are interested in testing whether number of steps in a recipe impacts the average length of reviews written for the recipe. Thus, we created a new column 'review_len' to perform a permutation test testing the following hypotheses:
 
-## Hypothesis Testing
+**Null Hypothesis:** The number of steps in a recipe has no impact on the average length of reviews received.
 
-### Hypotheses and Test
+**Alternative Hypothesis:** Recipes with a greater number of steps will result in a higher average length of reviews received.
 
-Clearly state your null and alternative hypotheses, your choice of test statistic and significance level, the resulting p-value, and your conclusion.
+**Test Statistic:** The test statistic we used is the difference in the mean length of reviews between recipes with a greater number of steps and those with fewer steps. Specifically, we calculate the mean review length for recipes above vs below the median number of steps and take their difference.
 
-### Visualization (Optional)
+**Significance Level:** 0.05
 
-Embed a visualization related to your hypothesis test if applicable.
+To determine whether the observed difference in mean review lengths is statistically significant, we performed a permutation test with 10,000 permutations. We use a permutation test because it does not assume a specific distribution for the data and allows us to directly test the difference in means under the null hypothesis by randomizing the assignment of review lengths to the two grous. Using the mean difference as ur test statistic allows us to compare average review lengths between the two groups.
 
+First, we calculated the observed difference in mean review lengths between recipes with steps above and below the median. Then, combined all review lengths and randomly shuffled them to create two new groups of the same size as the original groups. We then calculated the mean difference for each permutation. FInally, we computed the p-value as the proportion of permuted differences greater than or equal to the observed difference.
+
+<iframe
+  src="assets/permutation_test_plot.html"
+  width="650"
+  height="450"
+  frameborder="0"
+></iframe>
+
+The observed difference in mean review lengths was found to be significant with a p-value of 0.0, indicating none of the permuted differences were as extreme as the observed difference. Thus, we reject the null hypothesis at the 0.05 significance level. This result suggests that there is a statistically significant difference in the average length of reviews for recipes with a greater number of steps compared to those with fewer steps; recipes with more steps tend to receive longer reviews.
 
 # Framing a Prediction Problem
 
