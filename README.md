@@ -120,6 +120,8 @@ Here, we have plotted a scatterplot where we show the relationship between the `
 |      5.0 |          427.79 |                  13.64|           32.64 |                 40.33 |          29.02 |         69.09 |             32.73 |
 
 
+This is a pivot_table that depicts the mean nutrients per rating. From this pivot_table, we can see that certain nutrients quatities drop or rise along with rating. This is noticable in nutrients in `'carbohydrates (PDV)` or `'calories (#)'`.
+
 # Assessment of Missingness
 
 The columns 'description', 'review', and 'rating' had missing values in the original merged dataset.
