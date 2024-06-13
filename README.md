@@ -46,9 +46,12 @@ Describe, in detail, the data cleaning steps you took and how they affected your
 
 ## Bivariate Analysis
 
-### Relationship Plots
-
-Embed at least one plotly plot displaying the relationship between two columns. Include a 1-2 sentence explanation about your plot.
+<iframe
+  src="assets/bivariate.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Interesting Aggregates
 
