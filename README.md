@@ -218,7 +218,7 @@ Embed a visualization related to your hypothesis test if applicable.
 
 This problem is a **multi-class classification** problem. Here, the classes are the different ratings **1-5**. We chose this variable in order to answer the question we posed in the introduction. By predicting rating, we can asses if the people like healthy or unhealthy food.
 
-In order to determine how good our model is, we will be using the following metric ** Accuracy **. The reason why this was chosen over the other metrics like precision, recall, and F1  score is because in this classifier, the false negative scores or false positive score individually are not crucial. Since this is a low stakes classifier where any individual metric doesn't need to have prevelance over other, the **accuracy** is the best overall measure here.
+In order to determine how good our model is, we will be using the following metric **Accuracy**. The reason why this was chosen over the other metrics like precision, recall, and F1  score is because in this classifier, the false negative scores or false positive score individually are not crucial. Since this is a low stakes classifier where any individual metric doesn't need to have prevelance over other, the **accuracy** is the best overall measure here.
 
 
 # Baseline Model
