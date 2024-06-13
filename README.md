@@ -27,7 +27,13 @@ Describe, in detail, the data cleaning steps you took and how they affected your
 
 ### Cleaned DataFrame
 
-Show the head of your cleaned DataFrame.
+| name                              |   minutes |   contributor_id | submitted   |   sodium (PDV) |   protein (PDV) |   saturated fat (PDV) |   carbohydrates (PDV) |
+|:--------------------------------- |----------:|-----------------:|:------------|---------------:|----------------:|----------------------:|----------------------:|
+| 1 brownies in the world best ever |        40 |           985201 | 2008-10-27  |              3 |               3 |                    19 |                     6 |
+| 1 in canada chocolate chip cookies|        45 |          1848091 | 2011-04-11  |             22 |              13 |                    51 |                    26 |
+| 412 broccoli casserole            |        40 |            50969 | 2008-05-30  |             32 |              22 |                    36 |                     3 |
+| 412 broccoli casserole            |        40 |            50969 | 2008-05-30  |             32 |              22 |                    36 |                     3 |
+| 412 broccoli casserole            |        40 |            50969 | 2008-05-30  |             32 |              22 |                    36 |                     3 |
 
 ## Univariate Analysis
 
