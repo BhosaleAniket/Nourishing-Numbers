@@ -241,13 +241,13 @@ The output of the baseling model were as follow:
 
 In our opinion, this model is not "good" since there is a large difference between the training and testing accuracy. Currently, the model is overfit on the training data and doesn't have good variance. For this reason, the model has room for improvement and can't be classified as "good" right now.
 
-|   | 0   | 1   | 2   | 3    | 4    |
+|   | 1   | 2   | 3   | 4    | 5    |
 |---|-----|-----|-----|------|------|
-| 0 | 42  | 17  | 24  | 103  | 413  |
-| 1 | 10  | 9   | 23  | 84   | 315  |
-| 2 | 35  | 26  | 74  | 314  | 1032 |
-| 3 | 95  | 99  | 305 | 1686 | 5221 |
-| 4 | 345 | 297 | 864 | 4300 | 28146|
+| 1 | 42  | 17  | 24  | 103  | 413  |
+| 2 | 10  | 9   | 23  | 84   | 315  |
+| 3 | 35  | 26  | 74  | 314  | 1032 |
+| 4 | 95  | 99  | 305 | 1686 | 5221 |
+| 5 | 345 | 297 | 864 | 4300 | 28146|
 
 Above, we can see the confusion matrix generated for the model. We can note that there is low precision for the 'low' rating classes.
 
@@ -301,13 +301,13 @@ After running the model with the aforementioned hyperparamters and pre-processin
 
 From the results, we can see that the training accuracy of the model dropped. However, the validation and the testing accuracy of the model increased. We consider this an improvement over the baseline model since prediction based on unseen data is the most important aspect of a model. Here, we can see that the model is not overfitting the data like before, and the variance of the model is much higher and it is generalizing better to unseen data. This is why we consider this an improvement over the baseline model.
 
-|   | 0   | 1   | 2   | 3    | 4    |
+|   | 1   | 2   | 3   | 4    | 5    |
 |---|-----|-----|-----|------|------|
-| 0 | 28  | 10  | 12  | 38   | 511  |
-| 1 | 4   | 2   | 9   | 35   | 391  |
-| 2 | 15  | 12  | 34  | 160  | 1260 |
-| 3 | 32  | 33  | 100 | 868  | 6373 |
-| 4 | 112 | 94  | 254 | 1844 | 31648|
+| 1 | 28  | 10  | 12  | 38   | 511  |
+| 2 | 4   | 2   | 9   | 35   | 391  |
+| 3 | 15  | 12  | 34  | 160  | 1260 |
+| 4 | 32  | 33  | 100 | 868  | 6373 |
+| 5 | 112 | 94  | 254 | 1844 | 31648|
 
 Above, we can see the confusion matrix for the final model. We can note that the model is more tuned toward the data spread of all the data in our dataset.
 
