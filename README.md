@@ -82,6 +82,17 @@ In order to make our dataset compatible with our analysis, we took the following
   frameborder="0"
 ></iframe>
 
+count    83781.00
+mean        10.11
+std          6.39
+min          1.00
+25%          6.00
+50%          9.00
+75%         13.00
+max        100.00
+
+This plot plots the distribution of the `'n_steps'` in the merged dataframe. From the distribution plot, we can see that the number of steps in the dataframe is generally based around 6-7 steps. We can see that the minimum number of steps is 0 and the max number of steps is 100. In general, the number of steps lie between 6 and 13. The distribution of steps presents a normal distribution.
+
 ## Bivariate Analysis
 
 <iframe
