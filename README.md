@@ -241,6 +241,16 @@ The output of the baseling model were as follow:
 
 In our opinion, this model is not "good" since there is a large difference between the training and testing accuracy. Currently, the model is overfit on the training data and doesn't have good variance. For this reason, the model has room for improvement and can't be classified as "good" right now.
 
+|   | 0   | 1   | 2   | 3    | 4    |
+|---|-----|-----|-----|------|------|
+| 0 | 42  | 17  | 24  | 103  | 413  |
+| 1 | 10  | 9   | 23  | 84   | 315  |
+| 2 | 35  | 26  | 74  | 314  | 1032 |
+| 3 | 95  | 99  | 305 | 1686 | 5221 |
+| 4 | 345 | 297 | 864 | 4300 | 28146|
+
+Above, we can see the confusion matrix generated for the model. We can note that there is low precision for the 'low' rating classes.
+
 # Final Model
 
 ## Final Model
