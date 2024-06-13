@@ -267,7 +267,7 @@ This feature is computed by calculating the ratio between the ``'protein (PDV)'`
 
 **Note**: We have added a small epsilon to the denominator to prevent any zero division errors
 
-Our final model architecture uses a `'RandomForestClassifier'`. This model was chosen as opposed to the `'DecisionTreeClassifier`' since we saw an improved performance increase after trying out the two models on the same data. Additionally, the due to the architecture of the `'RandomForestClassifier'`, it was determined that have mutliple `'DecisionTreeClassifiers'` trained on the data would allow the model to better generalize and capture the trends in our data. The pipeline for the model contains the transformer to introduce the two new features mentioned above and the `'RandomForestClassifier'`.
+Our final model architecture uses a `'RandomForestClassifier'`. This model was chosen as opposed to the `'DecisionTreeClassifier`' since we saw an improved performance increase after trying out the two models on the same data. Additionally, the due to the architecture of the `'RandomForestClassifier'`, it was determined that if we have mutliple `'DecisionTreeClassifiers'` trained on the data would allow the model to better generalize and capture the trends in our data. The pipeline for the model contains the transformer to introduce the two new features mentioned above and the `'RandomForestClassifier'`.
 
 The hyperparameters for the model were chosen to be `'n_estimators'` and `'max_depth'`. The reasoning for each is provided below:
 
@@ -301,8 +301,15 @@ After running the model with the aforementioned hyperparamters and pre-processin
 
 From the results, we can see that the training accuracy of the model dropped. However, the validation and the testing accuracy of the model increased. We consider this an improvement over the baseline model since prediction based on unseen data is the most important aspect of a model. Here, we can see that the model is not overfitting the data like before, and the variance of the model is much higher and it is generalizing better to unseen data. This is why we consider this an improvement over the baseline model.
 
+|   | 0   | 1   | 2   | 3    | 4    |
+|---|-----|-----|-----|------|------|
+| 0 | 28  | 10  | 12  | 38   | 511  |
+| 1 | 4   | 2   | 9   | 35   | 391  |
+| 2 | 15  | 12  | 34  | 160  | 1260 |
+| 3 | 32  | 33  | 100 | 868  | 6373 |
+| 4 | 112 | 94  | 254 | 1844 | 31648|
 
-
+Above, we can see the confusion matrix for the final model. We can note that the model is more tuned toward the data spread of all the data in our dataset.
 
 # Fairness Analysis
 
