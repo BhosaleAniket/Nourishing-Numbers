@@ -10,11 +10,42 @@ We developed this approach because we are interested in whether the rise of fast
 
 ### Dataset Introduction
 
-Provide an introduction to your dataset, including its source and general description.
+In our analysis, we will use two datasets to complete our analysis. The first dataset is the `'recipes'` dataset. This dataset contains 83782 rows and 12 columns. Below is a description of the dataset.
 
-### Question Identification
+| Column             | Description                                                                                                                                                                                       |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `'name'`           | Recipe name                                                                                                                                                                                       |
+| `'id'`             | Recipe ID                                                                                                                                                                                         |
+| `'minutes'`        | Minutes to prepare recipe                                                                                                                                                                         |
+| `'contributor_id'` | User ID who submitted this recipe                                                                                                                                                                 |
+| `'submitted'`      | Date recipe was submitted                                                                                                                                                                         |
+| `'tags'`           | Food.com tags for recipe                                                                                                                                                                          |
+| `'nutrition'`      | Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value” |
+| `'n_steps'`        | Number of steps in recipe                                                                                                                                                                         |
+| `'steps'`          | Text for recipe steps, in order                                                                                                                                                                   |
+| `'description'`    | User-provided description                                                                                                                                                                         |
+| `'ingredients'`    | Text for recipe ingredients                                                                                                                                                                       |
+| `'n_ingredients'`  | Number of ingredients in recipe                                                                                                                                                                   |
 
-Clearly state the one question your project is centered around. Explain why readers should care about this question.
+The second dataset is the `'ratings'` dataset. This dataset contains 731927 rows and 5 columns. The information about the dataset is given below:
+
+| Column        | Description         |
+| :------------ | :------------------ |
+| `'user_id'`   | User ID             |
+| `'recipe_id'` | Recipe ID           |
+| `'date'`      | Date of interaction |
+| `'rating'`    | Rating given        |
+| `'review'`    | Review text         |
+
+
+Here, since we are analyzing the relationships between health, number of steps, and ratings, the relevant columns are:
+`'rating'`
+`'review'`
+`'nutrition'`
+`'n_steps'`
+`'minutes'`
+
+The description of all these columns is provided above.
 
 ### Dataset Details
 
