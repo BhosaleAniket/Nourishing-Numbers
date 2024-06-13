@@ -21,7 +21,7 @@ Clearly state the one question your project is centered around. Explain why read
 Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
 
 
-# Step 2: Data Cleaning and Exploratory Data Analysis
+# Data Cleaning and Exploratory Data Analysis
 
 ## Data Cleaning
 
@@ -161,7 +161,7 @@ Embed a visualization related to your hypothesis test if applicable.
 Clearly state your prediction problem and type (classification or regression). Report the response variable and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics.
 
 
-# Step 6: Baseline Model
+# Baseline Model
 
 ## Baseline Model
 
@@ -189,7 +189,7 @@ The output of the baseling model were as follow:
 
 In our opinion, this model is not "good" since there is a large difference between the training and testing accuracy. Currently, the model is overfit on the training data and doesn't have good variance. For this reason, the model has room for improvement and can't be classified as "good" right now.
 
-# Step 7: Final Model
+# Final Model
 
 ## Final Model
 
