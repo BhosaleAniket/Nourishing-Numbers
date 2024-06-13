@@ -37,9 +37,12 @@ Describe, in detail, the data cleaning steps you took and how they affected your
 
 ## Univariate Analysis
 
-### Distribution Plots
-
-Embed at least one plotly plot displaying the distribution of a single column. Include a 1-2 sentence explanation about your plot.
+<iframe
+  src="assets/univariate.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Bivariate Analysis
 
