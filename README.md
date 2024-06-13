@@ -211,7 +211,9 @@ Embed a visualization related to your hypothesis test if applicable.
 ### Prediction Problem
 
 ** Prediction Problem**: Can we predict the rating of a recipe based on the nutritional content of the recipe. 
+
 ** Input Parameters**: `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'`
+
 ** Output Parameters**: `'Rating'`
 
 This problem is a **multi-class classification** problem. Here, the classes are the different ratings **1-5**. We chose this variable in order to answer the question we posed in the introduction. By predicting rating, we can asses if the people like healthy or unhealthy food.
