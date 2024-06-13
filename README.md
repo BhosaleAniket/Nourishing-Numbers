@@ -202,7 +202,7 @@ We are interested in testing whether number of steps in a recipe impacts the ave
 
 **Significance Level:** 0.05
 
-To determine whether the observed difference in mean review lengths is statistically significant, we performed a permutation test with 10,000 permutations. We use a permutation test because it does not assume a specific distribution for the data and allows us to directly test the difference in means under the null hypothesis by randomizing the assignment of review lengths to the two grous. Using the mean difference as ur test statistic allows us to compare average review lengths between the two groups.
+To determine whether the observed difference in mean review lengths is statistically significant, we performed a permutation test with 10,000 permutations. We use a permutation test because it does not assume a specific distribution for the data and allows us to directly test the difference in means under the null hypothesis by randomizing the assignment of review lengths to the two groups. Using the mean difference as our test statistic allows us to compare average review lengths between the two groups.
 
 First, we calculated the observed difference in mean review lengths between recipes with steps above and below the median. Then, combined all review lengths and randomly shuffled them to create two new groups of the same size as the original groups. We then calculated the mean difference for each permutation. FInally, we computed the p-value as the proportion of permuted differences greater than or equal to the observed difference.
 
