@@ -51,7 +51,14 @@ Embed at least one plotly plot displaying the relationship between two columns. 
 
 ### Grouped/Pivot Table
 
-Embed at least one grouped table or pivot table and explain its significance.
+|   rating |   calories (#) |   carbohydrates (PDV) |   protein (PDV) |   saturated fat (PDV) |   sodium (PDV) |   sugar (PDV) |   total fat (PDV) |
+|---------:|----------------:|----------------------:|----------------:|----------------------:|---------------:|--------------:|------------------:|
+|      1.0 |          457.16 |                  15.6 |           31.19 |                 43.69 |          43.39 |         79.5  |             34.51 |
+|      2.0 |          438.04 |                  15.63|           31.44 |                 40.81 |          28.94 |         79.11 |             31.14 |
+|      3.0 |          424.03 |                  13.85|           33.81 |                 39.43 |          26.12 |         68.33 |             31.37 |
+|      4.0 |          417.67 |                  13.3 |           34.76 |                 37.49 |          27.95 |         59.63 |             30.88 |
+|      5.0 |          427.79 |                  13.64|           32.64 |                 40.33 |          29.02 |         69.09 |             32.73 |
+
 
 # Assessment of Missingness
 
