@@ -191,7 +191,7 @@ With an observed p-value of **0.624** > 0.05, we fail to reject the null, there 
 Zoomed in due to outliers in minutes, included only recipes that take 5000 minutes or less. 
 x: minutes y: probability, with 1 corresponding to True and 0 corresponding to False.
 
-# Step 4: Hypothesis Testing
+# Hypothesis Testing
 
 ## Hypothesis Testing
 
@@ -204,13 +204,19 @@ Clearly state your null and alternative hypotheses, your choice of test statisti
 Embed a visualization related to your hypothesis test if applicable.
 
 
-# Step 5: Framing a Prediction Problem
+# Framing a Prediction Problem
 
 ## Problem Identification
 
 ### Prediction Problem
 
-Clearly state your prediction problem and type (classification or regression). Report the response variable and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics.
+** Prediction Problem**: Can we predict the rating of a recipe based on the nutritional content of the recipe. 
+** Input Parameters**: `'total fat (PDV)'`, `'sugar (PDV)'`, `'sodium (PDV)'`, `'protein (PDV)'`, `'saturated fat (PDV)'`, `'carbohydrates (PDV)'`
+** Output Parameters**: `'Rating'`
+
+This problem is a **multi-class classification** problem. Here, the classes are the different ratings **1-5**. We chose this variable in order to answer the question we posed in the introduction. By predicting rating, we can asses if the people like healthy or unhealthy food.
+
+In order to determine how good our model is, we will be using the following metric ** Accuracy **. The reason why this was chosen over the other metrics like precision, recall, and F1  score is because in this classifier, the false negative scores or false positive score individually are not crucial. Since this is a low stakes classifier where any individual metric doesn't need to have prevelance over other, the **accuracy** is the best overall measure here.
 
 
 # Baseline Model
