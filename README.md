@@ -102,6 +102,8 @@ This plot plots the distribution of the `'n_steps'` in the merged dataframe. Fro
   frameborder="0"
 ></iframe>
 
+Here, we have plotted a scatterplot where we show the relationship between the `'n_steps'` and `'average_review_length'`. From the plot, we can see that there is a clear linear trend between `'n_steps'` and `'average_review_length'`. This linear relationship lies between 0 and 40 steps. Beyond 40 steps, the relationship doesn't exhibit the linear relationship anymore and we need to introduce new parameters to summarize the relationship.
+
 ## Interesting Aggregates
 
 ### Grouped/Pivot Table
