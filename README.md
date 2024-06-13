@@ -47,11 +47,6 @@ Here, since we are analyzing the relationships between health, number of steps, 
 
 The description of all these columns is provided above.
 
-### Dataset Details
-
-Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
-
-
 # Data Cleaning and Exploratory Data Analysis
 
 ## Data Cleaning
