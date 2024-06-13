@@ -39,8 +39,8 @@ Describe, in detail, the data cleaning steps you took and how they affected your
 
 <iframe
   src="assets/univariate.html"
-  width="800"
-  height="600"
+  width="650"
+  height="450"
   frameborder="0"
 ></iframe>
 
@@ -48,8 +48,8 @@ Describe, in detail, the data cleaning steps you took and how they affected your
 
 <iframe
   src="assets/bivariate.html"
-  width="800"
-  height="600"
+  width="650"
+  height="450"
   frameborder="0"
 ></iframe>
 
