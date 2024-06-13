@@ -152,7 +152,7 @@ Permutation test shuffling the missingness of reviews 1000 times to collect 1000
   height="450"
   frameborder="0"
 ></iframe>
-With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. The missingness of reviews does depend on number of steps. 
+With an observed p-value of **0.0** < 0.05, we reject the null hypothesis in favor of the alternative. We suggest that the missingness of reviews does depend on number of steps. 
 
 <iframe
   src="assets/rev_steps_plot.html"
